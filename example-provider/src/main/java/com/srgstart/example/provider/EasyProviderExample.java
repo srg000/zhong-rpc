@@ -1,9 +1,11 @@
 package com.srgstart.example.provider;
 
 import com.srgstart.example.common.service.UserService;
-import com.srgstart.zhongrpc.registry.LocalRegistry;
-import com.srgstart.zhongrpc.server.HttpServer;
-import com.srgstart.zhongrpc.server.VertxHttpServer;
+import com.srgstart.zhongrpc.bootstrap.ProviderBootstrap;
+import com.srgstart.zhongrpc.model.ServiceRegisterInfo;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author srgstart
@@ -12,12 +14,12 @@ import com.srgstart.zhongrpc.server.VertxHttpServer;
  */
 public class EasyProviderExample {
     public static void main(String[] args) {
+        // 要注册的服务
+        List<ServiceRegisterInfo<?>> serviceRegisterInfoList = new ArrayList<>();
+        ServiceRegisterInfo<?> serviceRegisterInfo = new ServiceRegisterInfo<>(UserService.class.getName(), UserServiceImpl.class);
+        serviceRegisterInfoList.add(serviceRegisterInfo);
 
-        // 注册服务
-        LocalRegistry.register(UserService.class.getName(), UserServiceImpl.class);
-
-        // 启动 web服务
-        HttpServer httpServer = new VertxHttpServer();
-        httpServer.doStart(8080);
+        // 服务提供者初始化
+        ProviderBootstrap.init(serviceRegisterInfoList);
     }
 }

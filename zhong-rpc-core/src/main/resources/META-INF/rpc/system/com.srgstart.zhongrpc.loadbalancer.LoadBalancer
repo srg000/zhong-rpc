@@ -1,0 +1,3 @@
+roundRobin=com.srgstart.zhongrpc.loadbalancer.RoundRobinLoadBalancer
+random=com.srgstart.zhongrpc.loadbalancer.RandomLoadBalancer
+consistentHash=com.srgstart.zhongrpc.loadbalancer.ConsistentHashLoadBalancer

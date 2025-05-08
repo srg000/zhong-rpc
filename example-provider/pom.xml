@@ -20,7 +20,7 @@
     <dependencies>
         <dependency>
             <groupId>com.srgstart</groupId>
-            <artifactId>zhong-rpc-easy</artifactId>
+            <artifactId>zhong-rpc-core</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>

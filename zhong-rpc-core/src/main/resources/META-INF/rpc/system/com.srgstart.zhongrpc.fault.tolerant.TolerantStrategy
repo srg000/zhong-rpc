@@ -1,0 +1,4 @@
+failBack=com.srgstart.zhongrpc.fault.tolerant.FailBackTolerantStrategy
+failFast=com.srgstart.zhongrpc.fault.tolerant.FailFastTolerantStrategy
+failOver=com.srgstart.zhongrpc.fault.tolerant.FailOverTolerantStrategy
+failSafe=com.srgstart.zhongrpc.fault.tolerant.FailSafeTolerantStrategy

@@ -1,0 +1,2 @@
+json=com.srgstart.zhongrpc.serializer.JsonSerializer
+kryo=com.srgstart.zhongrpc.serializer.KryoSerializer

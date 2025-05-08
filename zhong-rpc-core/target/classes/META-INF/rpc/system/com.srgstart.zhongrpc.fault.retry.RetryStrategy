@@ -1,0 +1,2 @@
+no=com.srgstart.zhongrpc.fault.retry.NoRetryStrategy
+fixedInterval=com.srgstart.zhongrpc.fault.retry.FixedIntervalRetryStrategy

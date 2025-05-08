@@ -1,0 +1,3 @@
+jdk=com.srgstart.zhongrpc.serializer.JdkSerializer
+hessian=com.srgstart.zhongrpc.serializer.HessianSerializer
+
